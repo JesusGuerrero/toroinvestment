@@ -1,0 +1,17 @@
+<ng-template #notFound>
+  <not-found></not-found>
+</ng-template>
+
+<div *ngIf="loaded">
+  <div *ngIf="article; else notFound">
+    <div class="container">
+      <article>
+        <h1>{{article.title}}</h1>
+        <p *ngFor="let section of article.sections" [innerHTML]="section"> </p>
+      </article>
+    </div>
+  </div>
+</div>
+
+
+

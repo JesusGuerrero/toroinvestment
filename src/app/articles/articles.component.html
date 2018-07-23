@@ -1,0 +1,10 @@
+<br/>
+<br/>
+
+<div *ngFor="let article of articles" class="p-3 border">
+
+  <div class="float-left" class="date">
+    {{article.created | date: 'MM/dd/yy'}}
+  </div>
+  <div><a [routerLink]="['/', 'articles', article.link]">{{article.title}}</a></div>
+</div>
